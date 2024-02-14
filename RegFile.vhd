@@ -6,8 +6,8 @@ use ieee.numeric_std.all; -- to declare unsigned or unsigned casting or to_integ
 -- Entity Port Declaration
 entity RegFile is 
 	generic (
-    	DATA_WIDTH : integer := 8;
-        ADDRESS_WIDTH : integer := 2);
+		DATA_WIDTH : integer := 8;
+		ADDRESS_WIDTH : integer := 2);
     port (
         W_DATA : in std_logic_vector(DATA_WIDTH-1 downto 0);
         W_ADDR, R_ADDR : in std_logic_vector(ADDRESS_WIDTH-1 downto 0);
@@ -38,6 +38,5 @@ begin
                 
         end if;
     end process REGISTERING_PROCESS;
-    
-    
+			
 end architecture RegFile_Arch;
